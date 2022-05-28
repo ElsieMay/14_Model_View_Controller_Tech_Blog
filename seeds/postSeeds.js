@@ -28,6 +28,6 @@ const postdata = [
 	},
 ];
 
-const seedPost = () => Painting.bulkCreate(postdata);
+const seedPost = () => Post.bulkCreate(postdata);
 
 module.exports = seedPost;
