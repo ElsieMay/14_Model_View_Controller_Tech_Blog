@@ -3,7 +3,7 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "node server.js",
 		"watch": "nodemon server.js",
-		"seed": "node seeds/seed.js"
+		"seed": "node seeds/indexSeeds.js"
 	},
 	"dependencies": {
 		"bcrypt": "^5.0.1",
