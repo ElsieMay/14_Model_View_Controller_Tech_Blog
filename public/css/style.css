@@ -1,6 +1,13 @@
+body {
+	background-color: #8cc0ae;
+	font-family: Arial;
+}
+
 header,
 .project:not(:last-child) {
 	border-bottom: 1px solid #ccc;
+	background-color: #62b0a3;
+	font-family: Arial;
 }
 
 .no-button {
