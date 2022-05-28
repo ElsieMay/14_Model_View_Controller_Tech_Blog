@@ -3,17 +3,17 @@ const Comment = require("./comment");
 const Post = require("./post");
 const User = require("./user");
 
-Comment.belongsto(User, {
+Comment.belongsTo(User, {
 	foreignKey: "user_id",
 	onDelete: "SET NULL",
 });
 
-Comment.belongsto(Post, {
+Comment.belongsTo(Post, {
 	foreignKey: "post_id",
 	onDelete: "SET NULL",
 });
 
-Post.belongsto(User, {
+Post.belongsTo(User, {
 	foreignKey: "user_id",
 	onDelete: "SET NULL",
 });
