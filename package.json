@@ -17,5 +17,21 @@
 		"sequelize": "^6.20.1",
 		"session": "^0.1.0",
 		"util": "^0.12.4"
-	}
+	},
+	"name": "14_model_view_controller_tech_blog",
+	"description": "## Description",
+	"version": "1.0.0",
+	"main": "server.js",
+	"devDependencies": {},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ElsieMay/14_Model_View_Controller_Tech_Blog.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/ElsieMay/14_Model_View_Controller_Tech_Blog/issues"
+	},
+	"homepage": "https://github.com/ElsieMay/14_Model_View_Controller_Tech_Blog#readme"
 }
