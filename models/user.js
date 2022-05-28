@@ -8,7 +8,7 @@ class User extends Model {
 	}
 }
 
-Post.init(
+User.init(
 	{
 		id: {
 			type: DataTypes.INTEGER,
@@ -55,4 +55,4 @@ Post.init(
 	}
 );
 
-module.exports = Post;
+module.exports = User;
