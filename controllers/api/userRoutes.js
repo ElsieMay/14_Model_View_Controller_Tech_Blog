@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User } = require("../../models");
+const { User, Post, Comment } = require("../../models");
 
 router.get("/", async (req, res) => {
 	try {
@@ -15,6 +15,31 @@ router.get("/", async (req, res) => {
 			users,
 			logged_in: req.session.logged_in,
 		});
+	} catch (err) {
+		res.status(500).json(err);
+	}
+});
+
+router.get("/:id", async (req, res) => {
+	try {
+		const postData = await Post.findOne(req.params.id, {
+			attributes: { exclude: ["password"] },
+			include: [
+				{
+					model: Post,
+					attributes: ["id", "post_text", "title", "created_at"],
+				},
+				{
+					model: Comment,
+					attributes: ["id", "comment_text", "user_id", "post_id", "created_at"],
+				},
+			],
+		});
+
+		if (!userData) {
+			res.status(400).json({ message: "No user found with this id, please try again" });
+			return;
+		}
 	} catch (err) {
 		res.status(500).json(err);
 	}
