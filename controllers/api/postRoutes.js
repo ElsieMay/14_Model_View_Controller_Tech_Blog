@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Project, Comment } = require("../../models");
+const { Project, Comment, Post } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 router.get("/", withAuth, async (req, res) => {
@@ -62,8 +62,9 @@ router.get("/:id", withAuth, async (req, res) => {
 
 router.post("/", withAuth, async (req, res) => {
 	try {
-		const newProject = await Project.create({
-			...req.body,
+		const newPost = await Post.create({
+			title: req.body.title,
+			post_text: req.body.post_text,
 			user_id: req.session.user_id,
 		});
 
