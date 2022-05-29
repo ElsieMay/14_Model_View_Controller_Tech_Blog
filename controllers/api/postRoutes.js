@@ -1,6 +1,7 @@
 const router = require("express").Router();
-const { Project, Comment, Post } = require("../../models");
+const { User, Comment, Post } = require("../../models");
 const withAuth = require("../../utils/auth");
+const sequelize = require("../../config/connection");
 
 router.get("/", withAuth, async (req, res) => {
 	try {
@@ -13,7 +14,7 @@ router.get("/", withAuth, async (req, res) => {
 			include: [
 				{
 					model: User,
-					attributes: ["name"],
+					attributes: ["username"],
 				},
 				{
 					model: Comment,

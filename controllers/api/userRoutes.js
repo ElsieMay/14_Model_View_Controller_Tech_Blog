@@ -32,7 +32,7 @@ router.get("/:id", async (req, res) => {
 				},
 				{
 					model: Comment,
-					attributes: ["id", "comment_text", "user_id", "post_id"],
+					attributes: ["id", "comment_text", "post_id"],
 				},
 			],
 		});
@@ -80,7 +80,7 @@ router.post("/login", async (req, res) => {
 		req.session.save(() => {
 			req.session.user_id = userData.id;
 			req.session.logged_in = true;
-			req.session.user_name = userData.name;
+			req.session.username = userData.username;
 
 			res.json({ user: userData, message: "You are now logged in!" });
 		});
