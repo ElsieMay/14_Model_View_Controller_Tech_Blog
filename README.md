@@ -35,7 +35,8 @@ I was aided by the BCS Learning assistant. They instructed me well.
 
 I followed these links for tutorials and additional readings:
 
-https://zellwk.com/blog/seed-database/<br>
+https://github.com/jsreport/jsreport/issues/395<br>
+https://stackoverflow.com/questions/47300408/handlebars-expecting-open-inverse-chain-inverse-open-endblock-got-eo<br>
 
 ## License
 
