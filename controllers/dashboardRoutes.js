@@ -12,10 +12,10 @@ router.get("/", withAuth, async (req, res) => {
 			},
 			attributes: ["id", "post_text", "title"],
 			include: [
-				{
-					model: User,
-					attributes: ["username"],
-				},
+				// {
+				// 	model: User,
+				// 	attributes: ["username"],
+				// },
 				{
 					model: Comment,
 					attributes: ["id", "comment_text", "user_id", "post_id"],
