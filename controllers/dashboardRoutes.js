@@ -10,7 +10,7 @@ router.get("/", withAuth, async (req, res) => {
 			where: {
 				user_id: req.session.user_id,
 			},
-			attributes: ["id", "post_text", "title", "created_at"],
+			attributes: ["id", "post_text", "title"],
 			include: [
 				{
 					model: User,
@@ -41,7 +41,7 @@ router.get("/edit/:id", withAuth, async (req, res) => {
 	try {
 		// Get all posts and JOIN with user data
 		const postData = await Post.findByPk(req.params.id, {
-			attributes: ["id", "post_text", "title", "created_at"],
+			attributes: ["id", "post_text", "title"],
 			include: [
 				{
 					model: User,
@@ -49,7 +49,7 @@ router.get("/edit/:id", withAuth, async (req, res) => {
 				},
 				{
 					model: Comment,
-					attributes: ["id", "comment_text", "user_id", "post_id", "created_at"],
+					attributes: ["id", "comment_text", "user_id", "post_id"],
 				},
 			],
 		});

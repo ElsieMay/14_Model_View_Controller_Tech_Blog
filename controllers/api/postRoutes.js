@@ -9,7 +9,7 @@ router.get("/", withAuth, async (req, res) => {
 			where: {
 				user_id: req.session.user_id,
 			},
-			attributes: ["id", "post_text", "title", "created_at"],
+			attributes: ["id", "post_text", "title"],
 			include: [
 				{
 					model: User,
@@ -17,7 +17,7 @@ router.get("/", withAuth, async (req, res) => {
 				},
 				{
 					model: Comment,
-					attributes: ["id", "comment_text", "user_id", "post_id", "created_at"],
+					attributes: ["id", "comment_text", "user_id", "post_id"],
 				},
 			],
 		});
@@ -42,11 +42,11 @@ router.get("/:id", withAuth, async (req, res) => {
 			include: [
 				{
 					model: Post,
-					attributes: ["id", "post_text", "title", "created_at"],
+					attributes: ["id", "post_text", "title"],
 				},
 				{
 					model: Comment,
-					attributes: ["id", "comment_text", "user_id", "post_id", "created_at"],
+					attributes: ["id", "comment_text", "user_id", "post_id"],
 				},
 			],
 		});
