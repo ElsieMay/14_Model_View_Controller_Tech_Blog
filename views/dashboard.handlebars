@@ -2,11 +2,11 @@
 	<a href="/dashboard/create/"><button id="create-post" class="button-create">Create Post</button></a>
 
 	<h2 class="title-post">Your Posts</h2>
+	<ol class="post-list-dashboard">
+		{{#each posts as |post|}}
+			<li>
+				{{post.title}}
+			</li>
+		{{/each}}
+	</ol>
 </section>
-<ol class="post-list">
-	{{#each posts as |post|}}
-		<li>
-			{{post.title}}
-		</li>
-	{{/each}}
-</ol>
