@@ -1,11 +1,12 @@
 <section class="posts">
 	<a href="/dashboard/create/"><button id="create-post" class="button-create">Create Post</button></a>
 
-	<h2 class="title-post">Your Posts</h2>
+	<h2>Your Posts</h2>
 	<ol class="post-list-dashboard">
 		{{#each posts as |post|}}
 			<li>
 				{{post.title}}
+				<a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit Post</a>
 			</li>
 		{{/each}}
 	</ol>
