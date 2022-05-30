@@ -1,15 +1,12 @@
-    <section class="posts">
-        <a href="/dashboard/create/"><button id="create-post" class="button-create">Create Post</button></a>
-        
-        <h2 class="title-post">Your Posts</h2>
-        </section>
-{{#if posts.length}}
-    <section>
+<section class="posts">
+	<a href="/dashboard/create/"><button id="create-post" class="button-create">Create Post</button></a>
 
-    {{#each posts as |post|}}
-        {{> post-info post}}
-        
-            <a href="/dashboard/edit/{{post.id}}"><button class="button post">Edit Post</button></a>
-        </section>
-    {{/each}}
-    {{/if}}
+	<h2 class="title-post">Your Posts</h2>
+</section>
+<ol class="post-list">
+	{{#each posts as |post|}}
+		<li>
+			{{post.title}}
+		</li>
+	{{/each}}
+</ol>
