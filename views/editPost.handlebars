@@ -2,7 +2,12 @@
 	<a href="/dashboard">&larr; Back to Dashboard</a>
 	<h2>Edit Post</h2>
 	<form class="edit-post">
-
+		<div>
+			<input type="text" name="title" value="{{post.title}}" />
+			<br />
+			<label for="post-content">Post Content:</label>
+			<textarea name="post-content" id="post-content" value="{{post.post_content}}"></textarea>
+		</div>
 	</form>
 </section>
 
