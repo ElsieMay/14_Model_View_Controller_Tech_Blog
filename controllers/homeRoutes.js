@@ -58,9 +58,9 @@ router.get("/post/:id", async (req, res) => {
 			],
 		});
 
-		const posts = postData.get({ plain: true });
+		const posts = postData.map((posts) => posts.get({ plain: true }));
 
-		res.render("post", {
+		res.render("editPost", {
 			posts,
 			logged_in: req.session.logged_in,
 			username: req.session.username,
