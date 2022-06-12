@@ -3,10 +3,18 @@
 	<h2>Edit Post</h2>
 	<form class="edit-post">
 		<div>
+			<label for="post-title">Post Title:</label>
+			<br />
 			<input type="text" name="title" value="{{post.title}}" />
 			<br />
 			<label for="post-content">Post Content:</label>
+			<br />
 			<textarea name="post-content" id="post-content" value="{{post.post_content}}"></textarea>
+			<div>created at: {{format_date format_time}}</div>
+		</div>
+		<div>
+			<button type="submit" class="btn btn-primary">Save Changes</button>
+			<button type="button" class="btn btn-primary">Delete Post</button>
 		</div>
 	</form>
 </section>
