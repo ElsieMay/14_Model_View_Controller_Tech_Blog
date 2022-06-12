@@ -1,3 +1,15 @@
+h1 {
+	text-align: center;
+	color: antiquewhite;
+	text-decoration: none;
+}
+
+h2 {
+	text-align: center;
+	color: antiquewhite;
+	text-decoration: none;
+}
+
 body {
 	background-color: #8cc0ae;
 	font-family: Arial;
@@ -29,4 +41,34 @@ header,
 	color: #056605;
 	font-weight: bold;
 	margin-left: -5px;
+}
+
+.post {
+	padding: 0.5%;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	text-align: center;
+	background-color: #62b0a3;
+	margin: 20px;
+	padding: 20px;
+}
+
+.edit-post {
+	padding: 0.5%;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	text-align: center;
+	background-color: #62b0a3;
+	margin: 20px;
+	padding: 20px;
+}
+
+.comment-form {
+	padding: 0.5%;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	text-align: center;
+	background-color: #62b0a3;
+	margin: 20px;
+	padding: 20px;
 }
