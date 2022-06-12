@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const { Post, User, Comment } = require("../models");
 const sequelize = require("../config/connection");
+const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
 	try {
@@ -44,27 +45,23 @@ router.get("/login", (req, res) => {
 
 router.get("/post/:id", async (req, res) => {
 	try {
-		const postData = await Post.findOne(req.params.id, {
-			attributes: ["id", "post_text", "title"],
-			include: [
-				{
-					model: Comment,
-					attributes: ["id", "comment_text", "post_id", "user_id"],
-				},
-				{
-					model: User,
-					attributes: ["username"],
-				},
-			],
-		});
+		// Find one post by it's Id
+		const postData = await Post.findByPk(req.params.id);
 
-		const posts = postData.map((posts) => posts.get({ plain: true }));
+		if (postData) {
+			// Serialize data so the template can read it
+			const post = postData.get({ plain: true });
 
-		res.render("editPost", {
-			posts,
-			logged_in: req.session.logged_in,
-			username: req.session.username,
-		});
+			// Pass serialized data and session flag into template
+			res.render("editPost", {
+				post,
+				logged_in: req.session.logged_in,
+				username: req.session.username,
+				created_at: req.session.createdAt,
+			});
+		} else {
+			res.status(404).end();
+		}
 	} catch (err) {
 		res.status(500).json(err);
 	}

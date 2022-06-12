@@ -14,4 +14,4 @@ const delButtonHandler = async (event) => {
 	}
 };
 
-document.querySelector(".post-list").addEventListener("click", delButtonHandler);
+document.querySelector(".delete-post").addEventListener("click", delButtonHandler);
