@@ -10,6 +10,14 @@ h2 {
 	text-decoration: none;
 }
 
+#title {
+	margin: 10px;
+}
+
+#post-content {
+	margin: 10px;
+}
+
 body {
 	background-color: #8cc0ae;
 	font-family: Arial;
