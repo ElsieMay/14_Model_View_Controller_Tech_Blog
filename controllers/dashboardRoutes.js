@@ -40,28 +40,17 @@ router.get("/", withAuth, async (req, res) => {
 router.get("/edit/:id", withAuth, async (req, res) => {
 	try {
 		// Get all posts and JOIN with user data
-		const postData = await Post.findByPk(req.params.id, {
-			attributes: ["id", "post_text", "title"],
-			include: [
-				{
-					model: User,
-					attributes: ["username"],
-				},
-				{
-					model: Comment,
-					attributes: ["id", "comment_text", "user_id", "post_id"],
-				},
-			],
-		});
+		const postData = await Post.findByPk(req.params.id);
 
 		// Serialize data so the template can read it
-		const posts = postData.get({ plain: true });
+		const post = postData.get({ plain: true });
 
 		// Pass serialized data and session flag into template
 		res.render("editPost", {
-			posts,
+			post,
 			logged_in: req.session.logged_in,
 			username: req.session.username,
+			created_at: req.session.createdAt,
 		});
 	} catch (err) {
 		res.status(500).json(err);

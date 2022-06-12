@@ -10,8 +10,8 @@
 			<br />
 			<label for="post-content">Post Content:</label>
 			<br />
-			<textarea name="post-content" id="post-content" value="{{post.post_content}}"></textarea>
-			<p>Created by {{post.user.name}} on {{format_date created_at}}</p>
+			<textarea name="post-content" id="post-content" value="{{post.post_text}}"></textarea>
+			<p>Created by {{username}} on {{format_date created_at}}</p>
 		</div>
 		<div>
 			<button type="submit" class="btn btn-primary">Save Changes</button>
