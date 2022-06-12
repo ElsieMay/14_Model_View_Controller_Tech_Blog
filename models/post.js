@@ -27,6 +27,10 @@ Post.init(
 			type: DataTypes.STRING,
 			allowNull: false,
 		},
+		created_at: {
+			type: DataTypes.DATE,
+			default: Date.now,
+		},
 	},
 	{
 		sequelize,

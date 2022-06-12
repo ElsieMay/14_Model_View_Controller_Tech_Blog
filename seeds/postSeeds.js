@@ -5,11 +5,13 @@ const postdata = [
 		title: "Lorem ipsum",
 		post_text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 		user_id: 1,
+		created_at: 06 / 03 / 2019,
 	},
 	{
 		title: "Curabitur at mi pharetra",
 		post_text: "Curabitur at mi pharetra, suscipit orci ultrices, aliquam justo.",
 		user_id: 2,
+		created_at: 06 / 03 / 2019,
 	},
 	{
 		title: "Phasellus ultricies",
