@@ -1,16 +1,15 @@
 const delButtonHandler = async (event) => {
-	if (event.target.hasAttribute("delete-post")) {
-		const id = event.target.getAttribute("delete-post");
+	const id = window.location.toString().split("/")[window.location.toString().split("/").length - 1];
 
-		const response = await fetch(`/api/posts/${id}`, {
-			method: "DELETE",
-		});
+	const response = await fetch(`/api/posts/${id}`, {
+		method: "DELETE",
+		body: JSON.stringify({ post_id: id }),
+	});
 
-		if (response.ok) {
-			document.location.replace("/dashboard");
-		} else {
-			alert("Failed to delete post");
-		}
+	if (response.ok) {
+		document.location.replace("/dashboard");
+	} else {
+		alert("Failed to delete post");
 	}
 };
 
