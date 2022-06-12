@@ -31,8 +31,10 @@ router.get("/", withAuth, async (req, res) => {
 			posts,
 			logged_in: req.session.logged_in,
 			username: req.session.username,
+			created_at: req.session.createdAt,
 		});
 	} catch (err) {
+		console.error(err);
 		res.status(500).json(err);
 	}
 });
@@ -53,6 +55,7 @@ router.get("/edit/:id", withAuth, async (req, res) => {
 			created_at: req.session.createdAt,
 		});
 	} catch (err) {
+		console.error(err);
 		res.status(500).json(err);
 	}
 });
@@ -85,8 +88,10 @@ router.get("/create", withAuth, async (req, res) => {
 			posts,
 			logged_in: req.session.logged_in,
 			username: req.session.username,
+			created_at: req.session.createdAt,
 		});
 	} catch (err) {
+		console.error(err);
 		res.status(500).json(err);
 	}
 });

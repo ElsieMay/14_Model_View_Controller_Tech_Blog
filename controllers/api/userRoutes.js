@@ -17,6 +17,7 @@ router.get("/", async (req, res) => {
 			logged_in: req.session.logged_in,
 		});
 	} catch (err) {
+		console.error(err);
 		res.status(500).json(err);
 	}
 });
@@ -42,6 +43,7 @@ router.get("/:id", async (req, res) => {
 			return;
 		}
 	} catch (err) {
+		console.error(err);
 		res.status(500).json(err);
 	}
 });
@@ -58,6 +60,7 @@ router.post("/", async (req, res) => {
 			res.status(200).json(userData);
 		});
 	} catch (err) {
+		console.error(err);
 		res.status(400).json(err);
 	}
 });
@@ -87,6 +90,7 @@ router.post("/login", async (req, res) => {
 			res.json({ user: userData, message: "You are now logged in!" });
 		});
 	} catch (err) {
+		console.error(err);
 		res.status(400).json(err);
 	}
 });
@@ -97,6 +101,7 @@ router.post("/logout", (req, res) => {
 			res.status(204).end();
 		});
 	} else {
+		console.error(err);
 		res.status(404).end();
 	}
 });
@@ -116,6 +121,7 @@ router.delete("/:id", withAuth, async (req, res) => {
 
 		res.status(200).json(userData);
 	} catch (err) {
+		console.error(err);
 		res.status(500).json(err);
 	}
 });
@@ -135,6 +141,7 @@ router.put("/:id", withAuth, async (req, res) => {
 
 		res.status(200).json(userData);
 	} catch (err) {
+		console.error(err);
 		res.status(500).json(err);
 	}
 });

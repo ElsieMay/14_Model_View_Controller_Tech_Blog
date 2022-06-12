@@ -30,6 +30,7 @@ router.get("/", withAuth, async (req, res) => {
 			username: req.session.username,
 		});
 	} catch (err) {
+		console.error(err);
 		res.status(500).json(err);
 	}
 });
@@ -54,6 +55,7 @@ router.get("/:id", withAuth, async (req, res) => {
 			return;
 		}
 	} catch (err) {
+		console.error(err);
 		res.status(500).json(err);
 	}
 });
@@ -91,6 +93,7 @@ router.put("/:id", withAuth, async (req, res) => {
 
 		res.status(200).json(postData);
 	} catch (err) {
+		console.error(err);
 		res.status(500).json(err);
 	}
 });
@@ -111,6 +114,7 @@ router.delete("/:id", withAuth, async (req, res) => {
 
 		res.status(200).json(postData);
 	} catch (err) {
+		console.error(err);
 		res.status(500).json(err);
 	}
 });

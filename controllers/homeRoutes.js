@@ -27,8 +27,11 @@ router.get("/", async (req, res) => {
 		res.render("homepage", {
 			posts,
 			logged_in: req.session.logged_in,
+			username: req.session.username,
+			created_at: req.session.createdAt,
 		});
 	} catch (err) {
+		console.error(err);
 		res.status(500).json(err);
 	}
 });
@@ -63,6 +66,7 @@ router.get("/post/:id", async (req, res) => {
 			res.status(404).end();
 		}
 	} catch (err) {
+		console.error(err);
 		res.status(500).json(err);
 	}
 });
