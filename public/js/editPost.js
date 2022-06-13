@@ -3,7 +3,7 @@ const editFormHandler = async (event) => {
 
 	const title = document.querySelector("#title").value;
 	const description = document.querySelector("#post-content").value;
-
+	console.log(title, description);
 	if (title && description) {
 		const response = await fetch(`/api/posts/${id}`, {
 			method: "PUT",
@@ -12,7 +12,7 @@ const editFormHandler = async (event) => {
 				"Content-Type": "application/json",
 			},
 		});
-
+		console.log(title, description);
 		if (response.ok) {
 			document.location.replace("/dashboard");
 		} else {
