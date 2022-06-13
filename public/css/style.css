@@ -6,7 +6,7 @@
 	cursor: pointer;
 	text-decoration: none;
 	text-align: center;
-	color: #683b2b;
+	color: white;
 	text-decoration: none;
 }
 
@@ -54,7 +54,7 @@ body {
 header,
 .project:not(:last-child) {
 	border-bottom: 1px solid #ccc;
-	background-color: #d49e8d;
+	background-color: #2e7cd2;
 	font-family: Arial;
 	color: #683b2b;
 }
@@ -64,7 +64,7 @@ header,
 	border: none;
 	padding: 0;
 	cursor: pointer;
-	color: #683b2b;
+	color: #ded1bd;
 	text-decoration: none;
 	font-size: 100%;
 }
@@ -74,7 +74,7 @@ header,
 	border: none;
 	padding: 0;
 	cursor: pointer;
-	color: #683b2b;
+	color: #ded1bd;
 	text-decoration: none;
 	font-size: 100%;
 }
@@ -89,7 +89,7 @@ header,
 	border: none;
 	padding: 0;
 	cursor: pointer;
-	color: #683b2b;
+	color: #ded1bd;
 	text-decoration: none;
 	font-size: 100%;
 }
