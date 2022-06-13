@@ -66,6 +66,7 @@ router.post("/", withAuth, async (req, res) => {
 			title: req.body.title,
 			post_text: req.body.post_text,
 			user_id: req.session.user_id,
+			created_at: req.session.createdAt,
 		});
 		console.log("newpost", newPost);
 		res.status(200).json(newPost);
