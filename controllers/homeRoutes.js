@@ -49,12 +49,19 @@ router.get("/login", (req, res) => {
 router.get("/post/:id", async (req, res) => {
 	try {
 		// Find one post by it's Id
-		const postData = await Post.findByPk(req.params.id);
+		const postData = await Post.findByPk(req.params.id, {
+			include: [
+				{
+					model: Comment,
+					attributes: ["id", "comment_text", "user_id", "post_id"],
+				},
+			],
+		});
 
 		if (postData) {
 			// Serialize data so the template can read it
 			const post = postData.get({ plain: true });
-
+			console.log(post);
 			// Pass serialized data and session flag into template
 			res.render("editPost", {
 				post,
