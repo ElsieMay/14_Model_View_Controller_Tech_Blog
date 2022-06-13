@@ -1,13 +1,13 @@
 <section class="posts">
-	<a href="/dashboard/create/"><button id="create-post" class="button-create">Create Post</button></a>
+	<a href="/dashboard/create/"><button id="create-post" class="btn btn-primary create-post">Create Post</button></a>
 
 	<h2>Your Posts</h2>
-	<ol class="post-list-dashboard">
+	<ol class="post-list-dashboard" id="posts">
 		{{#each posts as |post|}}
-			<li>
+			<div class="post-list">
 				{{post.title}}
 				<a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit Post</a>
-			</li>
+			</div>
 		{{/each}}
 	</ol>
 </section>

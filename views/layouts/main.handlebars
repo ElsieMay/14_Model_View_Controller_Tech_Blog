@@ -5,29 +5,28 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>The Tech Blog</title>
 		<link rel="stylesheet" href="/css/style.css" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 	</head>
 
 	<body>
 		<div class="flex-column justify-space-around">
 			<header class="display-flex justify-space-between align-center p-2">
 				<h1>
-					<a href="/">The Tech Blog</a>
-					
+					<a href="/" class="header">The Tech Blog</a>
 				</h1>
 				<nav>
 					<!-- Conditionally render login or logout links -->
-					<a href="/">Home</a>
-					<a href="/dashboard">Dashboard</a>
+					<a href="/" class="home">Home</a>
+					<a href="/dashboard" class="dashboard">Dashboard</a>
 					{{#if logged_in}}
-						
-						|
 						<button class="no-button" id="logout">Logout</button>
 					{{else}}
 						<a href="/login">Login</a>
 					{{/if}}
 				</nav>
 			</header>
-			<main class="container container-fluid mt-5">
+			<main>
 				<!-- Render the sub layout -->
 				{{{body}}}
 			</main>

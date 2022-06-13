@@ -1,13 +1,42 @@
+* {
+	font-family: "Noto Serif", serif;
+}
+
+.header {
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	color: #683b2b;
+	text-decoration: none;
+}
+
 h1 {
 	text-align: center;
-	color: antiquewhite;
-	text-decoration: none;
+	padding-top: 20px;
 }
 
 h2 {
 	text-align: center;
-	color: antiquewhite;
+	color: #683b2b;
 	text-decoration: none;
+}
+
+h3 {
+	color: #683b2b;
+	text-decoration: none;
+	padding-bottom: 15px;
+}
+
+span {
+	color: #683b2b;
+}
+
+p {
+	color: #683b2b;
+}
+
+nav {
+	padding: 20px;
 }
 
 #title {
@@ -19,15 +48,15 @@ h2 {
 }
 
 body {
-	background-color: #8cc0ae;
-	font-family: Arial;
+	background-color: #faf6f2;
 }
 
 header,
 .project:not(:last-child) {
 	border-bottom: 1px solid #ccc;
-	background-color: #62b0a3;
+	background-color: #d49e8d;
 	font-family: Arial;
+	color: #683b2b;
 }
 
 .no-button {
@@ -35,7 +64,32 @@ header,
 	border: none;
 	padding: 0;
 	cursor: pointer;
-	color: #1b89bc;
+	color: #683b2b;
+	text-decoration: none;
+	font-size: 100%;
+}
+
+.dashboard {
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	color: #683b2b;
+	text-decoration: none;
+	font-size: 100%;
+}
+
+#create-post {
+	background-color: #b08401;
+	color: white;
+}
+
+.home {
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	color: #683b2b;
 	text-decoration: none;
 	font-size: 100%;
 }
@@ -45,38 +99,132 @@ header,
 	text-decoration: underline;
 }
 
-.dollar-amount {
-	color: #056605;
-	font-weight: bold;
-	margin-left: -5px;
-}
-
 .post {
 	padding: 0.5%;
 	border-radius: 5px;
-	border: 1px solid #ccc;
+	border: 1px solid #b08401;
 	text-align: center;
-	background-color: #62b0a3;
+	background-color: #ded1bd;
 	margin: 20px;
 	padding: 20px;
+}
+
+main {
+	flex: 1;
+	padding: 3% 5%;
 }
 
 .edit-post {
 	padding: 0.5%;
 	border-radius: 5px;
-	border: 1px solid #ccc;
+	border: 1px solid #b08401;
 	text-align: center;
-	background-color: #62b0a3;
+	background-color: #ded1bd;
 	margin: 20px;
 	padding: 20px;
+	color: #683b2b;
+}
+
+#title {
+	color: #683b2b;
+}
+
+#post-content {
+	color: #683b2b;
+}
+
+#delete-post {
+	background-color: #b08401;
+}
+
+#save-changes {
+	background-color: #b08401;
+}
+
+#back-to-dashboard {
+	color: #683b2b;
+}
+
+#add {
+	background-color: #b08401;
+	color: white;
+	margin-top: 15px;
 }
 
 .comment-form {
 	padding: 0.5%;
 	border-radius: 5px;
-	border: 1px solid #ccc;
+	border: 1px solid #b08401;
 	text-align: center;
-	background-color: #62b0a3;
+	background-color: #ded1bd;
 	margin: 20px;
 	padding: 20px;
+}
+
+.comment {
+	padding: 0.5%;
+	border-radius: 5px;
+	border: 1px solid #b08401;
+	text-align: center;
+	background-color: #ded1bd;
+	margin: 20px;
+	padding: 20px;
+}
+
+.post-list {
+	padding: 0.5%;
+	border-radius: 5px;
+	border: 1px solid #b08401;
+	text-align: center;
+	background-color: #ded1bd;
+	margin: 20px;
+	padding: 20px;
+	color: #683b2b;
+}
+
+.welcome {
+	padding-bottom: 20px;
+}
+
+#welcome {
+	text-align: center;
+	align-items: center;
+}
+
+#create-div {
+	padding: 0.5%;
+	border-radius: 5px;
+	border: 1px solid #b08401;
+	text-align: center;
+	background-color: #ded1bd;
+	margin: 20px;
+	padding: 20px;
+	color: #683b2b;
+	display: flex;
+	justify-content: center;
+}
+
+#create-post {
+	background-color: #b08401;
+	color: white;
+	margin-top: 15px;
+}
+
+.button-create {
+	background-color: #ded1bd;
+	color: #683b2b;
+}
+
+.form-group {
+	color: #683b2b;
+}
+
+.meta {
+	font-size: large;
+	color: #683b2b;
+}
+
+.text {
+	font-size: medium;
+	color: #683b2b;
 }

@@ -1,8 +1,12 @@
-{{#each posts as |post|}}
+<div class="col-auto welcome">
+		<h2>Welcome {{username}}</h2>
+</div>
 
+{{#each posts as |post|}}
+<div>
 {{> post-info }}
 </div>
 
 {{else}}
-<h6 class="pb-4 has-text-centered is-italic">there are currently no posts</h6>
+<h6 class="pb-4">there are currently no posts</h6>
 {{/each}}

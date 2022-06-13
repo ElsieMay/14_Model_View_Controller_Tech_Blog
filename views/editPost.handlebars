@@ -1,5 +1,5 @@
 <section>
-	<a href="/dashboard">&larr; Back to Dashboard</a>
+	<a href="/dashboard" id="back-to-dashboard">&larr; Back to Dashboard</a>
 	<h2>Edit Post</h2>
 
 	<form class="edit-post">
@@ -14,7 +14,7 @@
 			<p>Created by {{username}} on {{format_date created_at}}</p>
 		</div>
 		<div>
-			<button type="submit" class="btn btn-primary edit-button">Save Changes</button>
+			<button type="submit" class="btn btn-primary edit-button" id="save-changes">Save Changes</button>
 			<button type="button" class="btn btn-primary delete-post" id="delete-post">Delete Post</button>
 		</div>
 		<div>
@@ -28,7 +28,7 @@
 		<textarea name="comment-body"></textarea>
 	</div>
 	<div>
-		<button type="submit">add comment</button>
+		<button type="button" class="btn btn-primary" id="add">add comment</button>
 	</div>
 </form>
 

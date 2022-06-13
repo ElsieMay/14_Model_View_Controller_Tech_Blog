@@ -37,6 +37,8 @@ I followed these links for tutorials and additional readings:
 
 https://github.com/jsreport/jsreport/issues/395<br>
 https://stackoverflow.com/questions/47300408/handlebars-expecting-open-inverse-chain-inverse-open-endblock-got-eo<br>
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea#attr-form<br>
+https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector<br>
 
 ## License
 
