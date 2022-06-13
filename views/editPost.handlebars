@@ -17,6 +17,9 @@
 			<button type="submit" class="btn btn-primary edit-button">Save Changes</button>
 			<button type="button" class="btn btn-primary delete-post" id="delete-post">Delete Post</button>
 		</div>
+		<div>
+            <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
+        </div>
 	</form>
 </section>
 
@@ -29,6 +32,8 @@
 	</div>
 </form>
 
-<script src="./../js/editPost.js"></script>
-<script src="./../js/deletePost.js"></script>
-<script src="./../js/comment.js"></script>
+{{> comments post.comments}}
+
+<script src="/js/editPost.js"></script>
+<script src="/js/deletePost.js"></script>
+<script src="/js/comment.js"></script>
