@@ -6,7 +6,11 @@ const withAuth = require("../../utils/auth");
 router.get("/", withAuth, async (req, res) => {
 	try {
 		// Get all comments and JOIN with user data
-		const commentData = await Comment.findAll({});
+		const commentData = await Comment.findAll({
+			user_id: req.session.user_id,
+			post_id: req.body.post_id,
+			created_at: req.session.createdAt,
+		});
 
 		// Serialize data so the template can read it
 		const posts = commentData.map((posts) => posts.get({ plain: true }));

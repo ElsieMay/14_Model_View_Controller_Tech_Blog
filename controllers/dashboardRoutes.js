@@ -10,15 +10,12 @@ router.get("/", withAuth, async (req, res) => {
 			where: {
 				user_id: req.session.user_id,
 			},
-			attributes: ["id", "post_text", "title"],
 			include: [
 				{
 					model: User,
-					attributes: ["username"],
 				},
 				{
 					model: Comment,
-					attributes: ["id", "comment_text", "user_id", "post_id"],
 				},
 			],
 		});
@@ -67,15 +64,12 @@ router.get("/create", withAuth, async (req, res) => {
 			where: {
 				user_id: req.session.user_id,
 			},
-			attributes: ["id", "post_text", "title"],
 			include: [
 				{
 					model: User,
-					attributes: ["username"],
 				},
 				{
 					model: Comment,
-					attributes: ["id", "comment_text", "user_id", "post_id"],
 				},
 			],
 		});
