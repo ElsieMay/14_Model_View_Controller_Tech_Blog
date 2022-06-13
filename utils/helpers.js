@@ -9,7 +9,7 @@ module.exports = {
 			month: "long",
 			day: "numeric",
 		};
-		return date.toLocaleDateString(options);
+		return date.toLocaleDateString(undefined, options);
 	},
 
 	format_plural: (word, amount) => {
