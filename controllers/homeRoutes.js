@@ -66,6 +66,7 @@ router.get("/post/:id", async (req, res) => {
 				created_at: req.session.createdAt,
 			});
 		} else {
+			// 404 status response
 			res.status(404).end();
 		}
 	} catch (err) {

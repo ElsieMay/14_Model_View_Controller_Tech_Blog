@@ -21,36 +21,18 @@ router.get("/", withAuth, async (req, res) => {
 
 router.post("/", withAuth, async (req, res) => {
 	try {
+		// Create a new comment when user is logged in
 		const newComment = await Comment.create({
 			comment_text: req.body.comment_text,
 			user_id: req.session.user_id,
 			post_id: req.body.post_id,
 		});
-
+		// 200 status response
 		res.status(200).json(newComment);
 	} catch (err) {
+		//console logs error if received
 		console.error(err);
 		res.status(400).json(err);
-	}
-});
-
-router.delete("/:id", withAuth, async (req, res) => {
-	try {
-		const commentData = await Comment.destroy({
-			where: {
-				id: req.params.id,
-			},
-		});
-
-		if (!commentData) {
-			res.status(404).json({ message: "No comment found with this id!" });
-			return;
-		}
-
-		res.status(200).json(commentData);
-	} catch (err) {
-		console.error(err);
-		res.status(500).json(err);
 	}
 });
 
