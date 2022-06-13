@@ -1,7 +1,8 @@
+/*These apply to the whole site*/
 * {
 	font-family: "Noto Serif", serif;
 }
-
+/*These are the header properties*/
 .header {
 	cursor: pointer;
 	text-decoration: none;
@@ -10,17 +11,29 @@
 	text-decoration: none;
 }
 
+/*These are the header properties*/
+header,
+.project:not(:last-child) {
+	border-bottom: 1px solid #ccc;
+	background-color: rgba(180, 76, 201, 0.5);
+	font-family: Arial;
+	color: #683b2b;
+}
+
+/*These apply to the h1 titles*/
 h1 {
 	text-align: center;
 	padding-top: 20px;
 }
 
+/*These apply to the h2 subtitles*/
 h2 {
 	text-align: center;
 	color: #683b2b;
 	text-decoration: none;
 }
 
+/*These apply to the h3 subtitles*/
 h3 {
 	color: #683b2b;
 	text-decoration: none;
@@ -35,18 +48,21 @@ p {
 	color: #683b2b;
 }
 
+/*This adds padding to the navbar*/
 nav {
 	padding: 20px;
 }
 
+/*This adds margin to the title*/
 #title {
 	margin: 10px;
 }
 
+/*This applies margin to the post's content*/
 #post-content {
 	margin: 10px;
 }
-
+/*These are the body properties*/
 body {
 	background-image: url("./../images/magicle-xY0s6aNCV24-unsplash.jpg");
 	background-size: cover;
@@ -54,14 +70,12 @@ body {
 	overflow: scroll;
 }
 
-header,
-.project:not(:last-child) {
-	border-bottom: 1px solid #ccc;
-	background-color: rgba(180, 76, 201, 0.5);
-	font-family: Arial;
-	color: #683b2b;
+main {
+	flex: 1;
+	padding: 3% 5%;
 }
 
+/*These are the logout button properties*/
 .no-button {
 	background: none;
 	border: none;
@@ -72,6 +86,7 @@ header,
 	font-size: 100%;
 }
 
+/*These are the dashboard button properties*/
 .dashboard {
 	background: none;
 	border: none;
@@ -82,11 +97,7 @@ header,
 	font-size: 100%;
 }
 
-#create-post {
-	background-color: #b08401;
-	color: white;
-}
-
+/*These are the home button properties*/
 .home {
 	background: none;
 	border: none;
@@ -97,21 +108,25 @@ header,
 	font-size: 100%;
 }
 
+/*These are the logout button properties when hovered over*/
 .no-button:hover {
 	color: #b08401;
 	text-decoration: underline;
 }
 
+/*These are the dashboard button properties when hovered over*/
 .dashboard:hover {
 	color: #b08401;
 	text-decoration: underline;
 }
 
+/*These are the home button properties when hovered over*/
 .home:hover {
 	color: #b08401;
 	text-decoration: underline;
 }
 
+/*These are the properties applied to the individual posts*/
 .post {
 	padding: 0.5%;
 	border-radius: 5px;
@@ -122,11 +137,7 @@ header,
 	padding: 20px;
 }
 
-main {
-	flex: 1;
-	padding: 3% 5%;
-}
-
+/*These are the properties applied to the individual post when editing*/
 .edit-post {
 	padding: 0.5%;
 	border-radius: 5px;
@@ -138,32 +149,39 @@ main {
 	color: #683b2b;
 }
 
+/*This is the title colour for edit post*/
 #title {
 	color: #683b2b;
 }
 
+/*This is the post content colour for edit post*/
 #post-content {
 	color: #683b2b;
 }
 
+/*This applies colour to the delete post button*/
 #delete-post {
 	background-color: #b08401;
 }
 
+/*This applies colour to the save changes button*/
 #save-changes {
 	background-color: #b08401;
 }
 
+/*This applies colour to the back to dashboard button*/
 #back-to-dashboard {
 	color: #b08401;
 }
 
+/*These are the add comment button properties*/
 #add {
 	background-color: #b08401;
 	color: white;
 	margin-top: 15px;
 }
 
+/*These are the comment form properties*/
 .comment-form {
 	padding: 0.5%;
 	border-radius: 5px;
@@ -174,6 +192,7 @@ main {
 	padding: 20px;
 }
 
+/*These are the comment's properties*/
 .comment {
 	padding: 0.5%;
 	border-radius: 5px;
@@ -184,6 +203,7 @@ main {
 	padding: 20px;
 }
 
+/*These apply to the list of posts*/
 .post-list {
 	padding: 0.5%;
 	border-radius: 5px;
@@ -195,11 +215,13 @@ main {
 	color: #683b2b;
 }
 
+/*These apply to the welcome title*/
 .welcome {
 	padding-bottom: 20px;
 	padding-top: 15px;
 }
 
+/*These are the create a post div's properties*/
 #create-div {
 	padding: 0.5%;
 	border-radius: 5px;
@@ -213,26 +235,31 @@ main {
 	justify-content: center;
 }
 
+/*These are the create post button's properties*/
 #create-post {
 	background-color: #b08401;
 	color: white;
 	margin-top: 15px;
 }
 
+/*This is the colour of the button to create a comment*/
 .button-create {
 	background-color: #efe6d8;
 	color: #683b2b;
 }
 
+/*This is the colour of the post form*/
 .form-group {
 	color: #683b2b;
 }
 
+/*This is the title colour for comments*/
 .meta {
 	font-size: large;
 	color: #683b2b;
 }
 
+/*This is the text colour for comments*/
 .text {
 	font-size: medium;
 	color: #683b2b;
