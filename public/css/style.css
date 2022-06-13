@@ -95,7 +95,17 @@ header,
 }
 
 .no-button:hover {
-	color: #065b83;
+	color: #683b2b;
+	text-decoration: underline;
+}
+
+.dashboard:hover {
+	color: #683b2b;
+	text-decoration: underline;
+}
+
+.home:hover {
+	color: #683b2b;
 	text-decoration: underline;
 }
 
