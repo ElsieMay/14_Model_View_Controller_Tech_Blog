@@ -1,9 +1,11 @@
 <div class="comments">
+	<!-- Loop through each comment -->
 	{{#each this}}
 		<section class="comment">
 			<div class="meta">
 				{{username}}
 				on
+				<!-- Displays full date that comment is created at -->
 				{{format_date_long created_at}}
 			</div>
 			<div class="text">

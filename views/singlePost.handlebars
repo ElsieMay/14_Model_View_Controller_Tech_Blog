@@ -1,5 +1,7 @@
+<!-- Renders posts -->
 {{> post-info post }}
 
+<!-- Renders post comment form when user is logged in to site -->
 {{#if loggedIn}}
 <form class="comment-form">
     <div>
@@ -12,8 +14,10 @@
 </form>
 {{/if}}
 
+<!-- Renders post comments -->
 {{> comments post.comments}}
 
+<!-- Renders username and date they created the single post -->
 <p>Created by {{username}} on {{format_date created_at}}</p>
 
 {{#if loggedIn}}

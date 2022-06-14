@@ -6,11 +6,13 @@
 		<div>
 			<label for="post-title">Post Title:</label>
 			<br />
+			<!-- Pulls post title -->
 			<input type="text" name="title" id="title" value="{{post.title}}" />
 			<br />
 			<label for="post-content">Post Content:</label>
 			<br />
 			<input name="post-content" id="post-content" value="{{post.post_text}}"></input>
+			<!-- Pulls username and date they created the post from database -->
 			<p>Created by {{username}} on {{format_date created_at}}</p>
 		</div>
 		<div>
@@ -18,11 +20,13 @@
 			<button type="button" class="btn btn-primary delete-post" id="delete-post">Delete Post</button>
 		</div>
 		<div>
+			<!-- Anchor tag for posts by post id, with comments and date included -->
             <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
         </div>
 	</form>
 </section>
 
+<!-- Comment form -->
 <form class="comment-form">
 	<div>
 		<textarea name="comment-body"></textarea>
@@ -32,6 +36,7 @@
 	</div>
 </form>
 
+<!-- Attaches post comments below post -->
 {{> comments post.comments}}
 
 <script src="/js/editPost.js"></script>

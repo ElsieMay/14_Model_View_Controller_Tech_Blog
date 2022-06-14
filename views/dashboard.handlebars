@@ -3,9 +3,12 @@
 
 	<h2>Your Posts</h2>
 	<ol class="post-list-dashboard" id="posts">
+		<!-- Loops through posts -->
 		{{#each posts as |post|}}
 			<div class="post-list">
+				<!-- Pulls post title -->
 				{{post.title}}
+				<!-- Anchor tag for edit page link -->
 				<a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit Post</a>
 			</div>
 		{{/each}}

@@ -1,13 +1,15 @@
 <div class="row" id="welcome">
 	<div class="col-auto welcome">
+		<!-- Pulls username upon logging in -->
 		<h2>Welcome, {{username}}!</h2>
 	</div>
 </div>
 
 <div class="row mt-4" id="create-div">
 	<div class="col-md-6">
+		<!-- New post title -->
 		<h3>Create a New Post:</h3>
-
+		<!-- Form to submit a new post -->
 		<form class="form new-post-form">
 			<div class="form-group">
 				<label for="post-name">post name:</label>
@@ -23,6 +25,7 @@
 		</form>
 	</div>
 
+	<!-- Loops through posts -->
 	{{#if post.length}}
 		<div class="col-md-6 project-list">
 			<h3>Current Posts:</h3>
@@ -30,9 +33,11 @@
 			{{#each posts as |post|}}
 				<div class="row mb-2">
 					<div class="col-md-8">
+						<!-- Pulls post by id and name -->
 						<h4><a href="/post/{{post.id}}">{{post.name}}</a></h4>
 					</div>
 					<div class="col-md-4">
+						<!-- Pulls post by id to delete post -->
 						<button class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
 					</div>
 				</div>

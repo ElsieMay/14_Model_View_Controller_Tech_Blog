@@ -1,12 +1,16 @@
 <div class="col-auto welcome">
+	<!-- Pulls username to welcome them -->
 		<h2>Welcome {{username}}</h2>
 </div>
 
+<!-- Loops through posts -->
 {{#each posts as |post|}}
 <div>
+	<!-- Pulls post information from db -->
 {{> post-info }}
 </div>
 
 {{else}}
+<!-- Displays if there are no posts in db -->
 <h6 class="pb-4">there are currently no posts</h6>
 {{/each}}

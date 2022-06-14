@@ -1,11 +1,15 @@
 <section class="post">
 	<div class="title">
+		<!-- Renders title of post selected -->
 		<h2>{{title}}</h2>
+		<!-- Displays full date that post is created at -->
 		<span>{{format_date_long created_at}}</span>
+		<!-- Renders post text -->
 		<p>{{post_text}}</p>
 	</div>
 
 	<div class="meta">
+		<!-- Anchor tag for post's comments attached, with date of creation included -->
 		<a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
 	</div>
 </section>
