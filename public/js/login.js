@@ -14,12 +14,12 @@ const loginFormHandler = async (event) => {
 		});
 
 		if (response.ok) {
-			// If successful, redirect the browser to the profile page
+			// If successful, redirect the browser to the home page
 			document.location.replace("/dashboard");
 		} else {
 			alert(response.statusText);
 		}
 	}
 };
-
+// Login event listener for when submission is made on click
 document.querySelector(".login-form").addEventListener("submit", loginFormHandler);
