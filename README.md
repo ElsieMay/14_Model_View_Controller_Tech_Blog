@@ -31,6 +31,8 @@ The Github repository can be viewed via this link, https://github.com/ElsieMay/1
 
 ![Screenshot](https://github.com/ElsieMay/14_Model_View_Controller_Tech_Blog/blob/main/public/images/Screen%20Shot%202022-06-16%20at%2010.54.07%20pm.png)
 
+![Screenshot](https://github.com/ElsieMay/14_Model_View_Controller_Tech_Blog/blob/main/public/images/Screen%20Shot%202022-06-16%20at%2010.58.05%20pm.png)
+
 ## Credits
 
 I was aided by the BCS Learning assistant. They instructed me well.
