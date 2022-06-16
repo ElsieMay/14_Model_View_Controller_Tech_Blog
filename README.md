@@ -17,13 +17,9 @@ I learnt about using node js, MySQL, Sequelize, Handlebars.js, express-session n
 
 To install necessary dependencies, run the following command: `npm install`. Please refer to the below demo for further information.
 
-## Demo
-
-https://drive.google.com/file/d/1rNIL8W7X5U5F0dMnREF_kzOSFjyBOWQ9/view
-
 ## Usage
 
-The Github repository can be viewed via this link, https://github.com/ElsieMay/13_ORM_E-Commerce_Back_End.
+The Github repository can be viewed via this link, https://github.com/ElsieMay/14_Model_View_Controller_Tech_Blog.
 
 ## App Screenshots
 
