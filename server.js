@@ -19,7 +19,7 @@ const sess = {
 	secret: "Super secret secret",
 	cookie: {
 		// maxAge sets the maximum age for the session to be active. Listed in milliseconds.
-		maxAge: 10000,
+		maxAge: 100000,
 	},
 	resave: false,
 	saveUninitialized: true,
