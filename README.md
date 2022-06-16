@@ -23,7 +23,15 @@ The Github repository can be viewed via this link, https://github.com/ElsieMay/1
 
 ## App Screenshots
 
-![Screenshot](https://github.com/ElsieMay/13_ORM_E-Commerce_Back_End/blob/main/images/Screen%20Shot%202022-05-24%20at%2010.10.33%20pm.png)
+![Screenshot](https://github.com/ElsieMay/14_Model_View_Controller_Tech_Blog/blob/main/public/images/Screen%20Shot%202022-06-16%20at%2010.53.08%20pm.png)
+
+![Screenshot](https://github.com/ElsieMay/14_Model_View_Controller_Tech_Blog/blob/main/public/images/Screen%20Shot%202022-06-16%20at%2010.53.41%20pm%201.png)
+
+![Screenshot](https://github.com/ElsieMay/14_Model_View_Controller_Tech_Blog/blob/main/public/images/Screen%20Shot%202022-06-16%20at%2010.53.41%20pm.png)
+
+![Screenshot](https://github.com/ElsieMay/14_Model_View_Controller_Tech_Blog/blob/main/public/images/Screen%20Shot%202022-06-16%20at%2010.53.53%20pm.png)
+
+![Screenshot](https://github.com/ElsieMay/14_Model_View_Controller_Tech_Blog/blob/main/public/images/Screen%20Shot%202022-06-16%20at%2010.54.07%20pm.png)
 
 ## Credits
 
