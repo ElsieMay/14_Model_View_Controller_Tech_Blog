@@ -21,6 +21,8 @@ To install necessary dependencies, run the following command: `npm install`. Ple
 
 The Github repository can be viewed via this link, https://github.com/ElsieMay/14_Model_View_Controller_Tech_Blog.
 
+The deployed application can be viewed via this link, https://elsietechblog.herokuapp.com/login.
+
 ## App Screenshots
 
 ![Screenshot](https://github.com/ElsieMay/14_Model_View_Controller_Tech_Blog/blob/main/public/images/Screen%20Shot%202022-06-16%20at%2010.53.08%20pm.png)
